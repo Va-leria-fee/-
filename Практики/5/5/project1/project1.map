@@ -1,0 +1,97 @@
+HI-TECH Software 8051-C Compiler V9.60
+
+Linker command line:
+
+--edf=C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\dat\en_msgs.txt \
+  -h+Z:\project1.sym -z -Q8051AH -ol.obj -MZ:\project1.map -E1 \
+  -ver=8051-C#V9.60 -ACODE=00h-0FFFh -pvectors=00h \
+  -prbit=0/20h,rbss,rdata/CODE,irdata/CODE,idata/rbss -pbss=XDATA/idata \
+  -pdata=CODE+100h -pconst=CODE+100h -pstrings=CODE+100h -pnvram=bss,heap \
+  C:\Users\EBERL_~1\AppData\Local\Temp\salo.obj Z:\main_0.obj \
+  C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\lib\51--nsc.lib 
+
+Object code version is 3.8
+
+Machine type is 8051AH
+
+Call graph:
+
+*start1 size 0,0 offset 0
+*    _main size 0,20 offset 0
+*        _func size 0,7 offset 20
+*            _f size 0,0 offset 27
+         _number size 0,3 offset 20
+*        _f size 0,0 offset 27
+         _answer size 0,0 offset 20
+
+		Name          Link     Load   Length Selector Space Scale
+C:\Users\EBERL_~1\AppData\Local\Temp\salo.obj
+		vectors          0        0        3       0     0
+		text           8F1      8F1       14       0     0
+Z:\main_0.obj   text             3        3      810       0     0
+
+C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\lib\51--nsc.lib
+powerup.obj     text           905      905        3       0     0
+mul.obj         text           8D3      8D3       1E       0     0
+div.obj         text           813      813       C0       0     0
+
+COMMON          rbss            20       20       1B      20     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	CODE     
+		vectors          0        0        3
+		text           8F1      8F1       14
+		text             3        3      810
+		text           905      905        3
+		text           8D3      8D3       1E
+		text           813      813       C0
+
+	CLASS	DATA     
+		rbss            20       20       1B
+
+	CLASS	XDATA    
+
+	CLASS	BITSEG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		vectors         000000	000908	000908	       0       0  CODE    
+		rbit            000020	00001B	00003B	      20       1  BITSEG  
+
+
+UNUSED ADDRESS RANGES
+
+	CODE             908-FFF
+
+                                  Symbol Table
+
+?a_func        rbss    034  ?a_main        rbss    020
+?a_number      rbss    034  __Bbss         bss     03B
+__Bidata       idata   03B  __Birdata      irdata  003
+__Brbit        rbit    020  __Brdata       rdata   003
+__Hbss         bss     03B  __Hcode        code    03B
+__Hconst       const   100  __Hdata        data    100
+__Hheap        heap    03B  __Hidata       idata   03B
+__Hirdata      irdata  03B  __Hnvram       nvram   03B
+__Hrbit        rbit    000  __Hrbss        rbss    03B
+__Hrdata       rdata   03B  __Hstrings     strings 100
+__Htext        text    03B  __Hvectors     vectors 003
+__Lbss         bss     03B  __Lcode        code    03B
+__Lconst       const   100  __Ldata        data    100
+__Lheap        heap    03B  __Lidata       idata   03B
+__Lirdata      irdata  03B  __Lnvram       nvram   03B
+__Lrbit        rbit    000  __Lrbss        rbss    020
+__Lrdata       rdata   03B  __Lstrings     strings 100
+__Ltext        text    03B  __Lvectors     vectors 000
+__S0           (abs)   908  _answer        text    341
+_exit          text    902  _f             text    003
+_func          text    013  _main          text    353
+_number        text    30E  awdiv          text    8A3
+awmod          text    89B  awmul          text    8D3
+intlevel0      (abs)   000  intlevel1      (abs)   000
+lwdiv          text    868  lwmod          text    874
+lwmul          text    8D3  powerup        text    905
+small_model    (abs)   001  stack_internal (abs)   001
+start          vectors 000  start1         text    8F1
